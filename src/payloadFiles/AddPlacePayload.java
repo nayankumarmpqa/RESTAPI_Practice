@@ -3,7 +3,7 @@ package payloadFiles;
 public class AddPlacePayload {
 
 	
-	public static String AddPlacePayLoad() {
+	public static String AddPlacePayLoadText() {
 		
 		return "{\r\n" + 
 				"  \"location\": {\r\n" + 

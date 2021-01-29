@@ -26,7 +26,7 @@ public class Basic {
 		.log().all() // to Log the request in the console
 				.queryParam("key", "qaclick123")
 				.header("Content-Type","application/json")
-				.body(AddPlacePayload.AddPlacePayLoad())
+				.body(AddPlacePayload.AddPlacePayLoadText())
 		
 		.when()
 				.post("maps/api/place/add/json")
@@ -42,7 +42,8 @@ public class Basic {
 		JsonPath js = new JsonPath(response);
 		String placeId = js.getString("place_id");
 		System.out.println("I got the place_id as = " + placeId);
-		
+		System.out.println();
+		System.out.println();
 		
 		//Update Place
 		String newAddress = "new address with Summer walk, USA"; 

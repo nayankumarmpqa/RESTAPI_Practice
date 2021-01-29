@@ -10,7 +10,7 @@ import static org.hamcrest.Matchers.*;
 
 import org.testng.Assert;
 
-public class Basic2 {
+public class ComplexJsonParse {
 
 	public static void main(String[] rgs) {
 
@@ -37,17 +37,21 @@ public class Basic2 {
 		int p = js1.getInt("dashboard.purchaseAmount");
 		System.out.println(p);
 
-		// Print course titles and price.
+		// Print 1st course titles and price.
 
-		String CTitle1 = js1.get("courses[0].title");
-		System.out.println(CTitle1);
+		String CTitle1 = js1.get("courses[0].title"); //getting course array's 0th index > title
+		System.out.println("courses[0].title is " + CTitle1);
+		
+		String CTitle1price = js1.getString("courses[0].price"); //getting course array's 0th index > price
+		System.out.println("courses[0].price is " + CTitle1price);
 
+		//Print all course tiles and its prices
 		for (int i = 0; i < count; i++) {
 
 			String CTs = js1.get("courses[" + i + "].title");
 
-			System.out.println(CTs);
-			System.out.println(js1.get("courses[" + i + "].price").toString());
+			System.out.print(CTs);
+			System.out.println(" "+js1.get("courses[" + i + "].price").toString());
 
 		}
 
@@ -60,10 +64,11 @@ public class Basic2 {
 
 			if (CTs.equalsIgnoreCase("RPA")) {
 				int CopyCount = js1.get("courses[" + i + "].copies");
-				System.out.println(CTs);
-
-				System.out.println(js1.get("courses[" + i + "].price").toString());
-				System.out.println(CopyCount);
+				System.out.println("course title is = " + CTs);
+				System.out.println("course title copies are = " + CopyCount);
+				
+				System.out.println("RPA course price per unit is = "+ js1.get("courses[" + i + "].price").toString());
+				System.out.println("RPA course copies sold are = "+ CopyCount);
 				break;
 			}
 
