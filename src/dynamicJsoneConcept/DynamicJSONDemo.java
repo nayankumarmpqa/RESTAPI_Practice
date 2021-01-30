@@ -16,8 +16,9 @@ public class DynamicJSONDemo {
 	public static void main(String[]  rgs) {
 	//public void addBook() {
 		
-		String addBookResponse= 
+		
 		RestAssured.baseURI = "http://216.10.245.166";
+		String addBookResponse= 
 		given()
 		.log().all()
 			.header("Content-Type", "application/json")
@@ -28,12 +29,12 @@ public class DynamicJSONDemo {
 			.post("/Library/Addbook.php")
 			
 		.then()
-			.log().all()
+			//.log().all()
 				.assertThat().statusCode(200)
 				.extract().response().asString();
 		
-		JsonPath js= new JsonPath(addBookResponse);
-		String addedBookID = js.getString("ID");
+		JsonPath jsr= new JsonPath(addBookResponse);
+		String addedBookID = jsr.getString("ID");
 		System.out.println(addedBookID);
 	}
 
