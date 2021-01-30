@@ -44,12 +44,43 @@ public class StaticJsonPayloadFileDemo {
 		JsonPath jsr = new JsonPath(addBookResponse);
 		String addedBookID = jsr.getString("ID");
 		System.out.println("Added book ID from the API response is = " + addedBookID);
-	}
+		
+		
+		
+	
+		//============================Delete added book code below====================
+		
+		given()
+		.log()
+		.all()
+		.header("Content-Type", "application/json")
+		.body("{\r\n" + 
+				" \r\n" + 
+				"\"ID\" : \""+addedBookID+"\"\r\n" + 
+				" \r\n" + 
+				"}") 
+		//above payload without GenerateStringFromResource
+		
+		.when()
+			.log()
+			.all()	
+			.post("/Library/DeleteBook.php")
 
+		.then()
+		.log().all()
+		.assertThat().statusCode(200).extract().response().asString();
 
+		}
+	
+
+		
 	
 	public static String GenerateStringFromResource(String path) throws IOException{
 		return new String(Files.readAllBytes(Paths.get(path)));
 	}
+	
 
+	
+	
 }
+
