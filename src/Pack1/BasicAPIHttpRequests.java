@@ -9,7 +9,7 @@ import payloadFiles.AddPlacePayload;
 import static org.hamcrest.Matchers.*;
 
 import org.testng.Assert;
-public class Basic {
+public class BasicAPIHttpRequests {
 
 	public static void main(String[]  rgs) {
 		// Validate Add place API is working fine

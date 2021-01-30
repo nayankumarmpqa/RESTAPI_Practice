@@ -74,7 +74,7 @@ public class StaticJsonPayloadFileDemo {
 	
 
 		
-	
+	//This method is to get and static eternal jason file into the program
 	public static String GenerateStringFromResource(String path) throws IOException{
 		return new String(Files.readAllBytes(Paths.get(path)));
 	}
