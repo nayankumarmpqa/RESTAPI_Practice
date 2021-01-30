@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-30T01:17:02 IST" name="Default suite" finished-at="2021-01-30T01:17:05 IST" duration-ms="2757">
+  <suite started-at="2021-01-30T14:35:51 IST" name="Default suite" finished-at="2021-01-30T14:35:55 IST" duration-ms="4724">
     <groups>
     </groups>
-    <test started-at="2021-01-30T01:17:02 IST" name="Default test" finished-at="2021-01-30T01:17:05 IST" duration-ms="2757">
-      <class name="dynamicJsoneConcept.DynamicJSONDemo">
-        <test-method signature="addBook()[pri:0, instance:dynamicJsoneConcept.DynamicJSONDemo@49c386c8]" started-at="2021-01-30T01:17:03 IST" name="addBook" finished-at="2021-01-30T01:17:05 IST" duration-ms="2675" status="FAIL">
+    <test started-at="2021-01-30T14:35:51 IST" name="Default test" finished-at="2021-01-30T14:35:55 IST" duration-ms="4724">
+      <class name="dynamicJsoneConcept.StaticJsonPayloadFileDemo">
+        <test-method signature="addBook()[pri:0, instance:dynamicJsoneConcept.StaticJsonPayloadFileDemo@56528192]" started-at="2021-01-30T14:35:51 IST" name="addBook" finished-at="2021-01-30T14:35:55 IST" duration-ms="4537" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[1 expectation failed.
@@ -63,7 +63,7 @@ at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
 at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
 at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
 at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
-at dynamicJsoneConcept.DynamicJSONDemo.addBook(DynamicJSONDemo.java:31)
+at dynamicJsoneConcept.StaticJsonPayloadFileDemo.addBook(StaticJsonPayloadFileDemo.java:42)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -98,7 +98,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook -->
-      </class> <!-- dynamicJsoneConcept.DynamicJSONDemo -->
+      </class> <!-- dynamicJsoneConcept.StaticJsonPayloadFileDemo -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

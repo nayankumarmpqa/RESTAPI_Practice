@@ -3,7 +3,7 @@ package payloadFiles;
 public class AddbookPayload {
 	
 	
-	public static String AddBookPayLoadText() {
+	public static String AddBookPayLoadText(String isbn, String aisle) {
 		/*String AddBookPayLoadString = "{\r\n" + 
 				"\"name\":\"Learn RESTAPI Automation with Java\",\r\n" + 
 				"\"isbn\":\"nk12\",\r\n" + 
@@ -14,8 +14,8 @@ public class AddbookPayload {
 		return "{\r\n" + 
 				"\r\n" + 
 				"\"name\":\"Learn Appium Automation with Java\",\r\n" + 
-				"\"isbn\":\"NK21\",\r\n" + 
-				"\"aisle\":\"231\",\r\n" + 
+				"\"isbn\":\""+isbn+"\",\r\n" + 
+				"\"aisle\":\""+aisle+"\",\r\n" + 
 				"\"author\":\"John foe\"\r\n" + 
 				"}\r\n" + 
 				"";
